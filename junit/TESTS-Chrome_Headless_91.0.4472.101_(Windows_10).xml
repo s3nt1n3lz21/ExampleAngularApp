@@ -1,8 +1,15 @@
 <?xml version="1.0"?>
-<testsuite name="Chrome Headless 91.0.4472.101 (Windows 10)" package="" timestamp="2021-06-16T13:14:35" id="0" hostname="DESKTOP-L592REJ" tests="0" errors="0" failures="0" time="0">
+<testsuite name="Chrome Headless 91.0.4472.101 (Windows 10)" package="" timestamp="2021-06-16T16:56:51" id="0" hostname="DESKTOP-L592REJ" tests="7" errors="0" failures="0" time="0.022">
   <properties>
     <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/91.0.4472.101 Safari/537.36"/>
   </properties>
+  <testcase name="[karma-parallel] Add single test to prevent failure should prevent on this shard failing by having successful tests" time="0.002" classname="Chrome_Headless_91_0_4472_101_(Windows_10).[karma-parallel] Add single test to prevent failure"/>
+  <testcase name="[karma-parallel] Add single test to prevent failure should prevent on this shard failing by having successful tests" time="0.022" classname="Chrome_Headless_91_0_4472_101_(Windows_10).[karma-parallel] Add single test to prevent failure"/>
+  <testcase name="[karma-parallel] Add single test to prevent failure should prevent on this shard failing by having successful tests" time="0.002" classname="Chrome_Headless_91_0_4472_101_(Windows_10).[karma-parallel] Add single test to prevent failure"/>
+  <testcase name="[karma-parallel] Add single test to prevent failure should prevent on this shard failing by having successful tests" time="0.001" classname="Chrome_Headless_91_0_4472_101_(Windows_10).[karma-parallel] Add single test to prevent failure"/>
+  <testcase name="[karma-parallel] Add single test to prevent failure should prevent on this shard failing by having successful tests" time="0.002" classname="Chrome_Headless_91_0_4472_101_(Windows_10).[karma-parallel] Add single test to prevent failure"/>
+  <testcase name="[karma-parallel] Add single test to prevent failure should prevent on this shard failing by having successful tests" time="0.002" classname="Chrome_Headless_91_0_4472_101_(Windows_10).[karma-parallel] Add single test to prevent failure"/>
+  <testcase name="[karma-parallel] Add single test to prevent failure should prevent on this shard failing by having successful tests" time="0.001" classname="Chrome_Headless_91_0_4472_101_(Windows_10).[karma-parallel] Add single test to prevent failure"/>
   <system-out>
     <![CDATA[
 ]]>
