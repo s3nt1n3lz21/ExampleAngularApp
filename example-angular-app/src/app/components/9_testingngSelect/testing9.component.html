@@ -1,0 +1,8 @@
+<ng-select
+    id="optionDropdown"
+    [items]="options"
+    [searchable]="false"
+    [clearable]="false"
+    [ngModel]="option"
+    (ngModelChange)="selectOption($event)"
+></ng-select>

@@ -1,54 +1,56 @@
 <?xml version="1.0"?>
-<testsuite name="Chrome Headless 91.0.4472.106 (Windows 10)" package="" timestamp="2021-06-17T13:21:00" id="0" hostname="DESKTOP-L592REJ" tests="39" errors="0" failures="1" time="0.241">
+<testsuite name="Chrome Headless 91.0.4472.106 (Windows 10)" package="" timestamp="2021-06-17T17:34:06" id="0" hostname="DESKTOP-L592REJ" tests="48" errors="0" failures="0" time="0.237">
   <properties>
     <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/91.0.4472.106 Safari/537.36"/>
   </properties>
-  <testcase name="Testing Child Component Outputs should create" time="0.015" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Child Component Outputs"/>
-  <testcase name="Testing Components Are Displayed should create" time="0.037" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Components Are Displayed"/>
-  <testcase name="Testing Components Are Displayed query should get the element by id" time="0.006" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Components Are Displayed query"/>
-  <testcase name="Testing Components Are Displayed query should get the element by class" time="0.007" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Components Are Displayed query"/>
-  <testcase name="Testing Components Are Displayed query should get the element by name of the component" time="0.005" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Components Are Displayed query"/>
-  <testcase name="Testing Components Are Displayed query should get the element by selector" time="0.012" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Components Are Displayed query"/>
-  <testcase name="Testing Components Are Displayed queryAll should get the element by selector" time="0.005" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Components Are Displayed queryAll"/>
-  <testcase name="Testing Components Are Displayed queryAll should get the element by id" time="0.005" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Components Are Displayed queryAll"/>
-  <testcase name="Testing Components Are Displayed queryAll should get the element by class" time="0.004" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Components Are Displayed queryAll"/>
-  <testcase name="Testing Components Are Displayed queryAll should get the element by name of the component" time="0.005" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Components Are Displayed queryAll"/>
-  <testcase name="Testing Components Are Displayed querySelector should get the element by class" time="0.006" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Components Are Displayed querySelector"/>
-  <testcase name="Testing Components Are Displayed querySelector should get the element by id" time="0.006" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Components Are Displayed querySelector"/>
+  <testcase name="Testing Components Are Displayed query should get the element by id" time="0.046" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Components Are Displayed query"/>
+  <testcase name="Testing Components Are Displayed query should get the element by class" time="0.008" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Components Are Displayed query"/>
+  <testcase name="Testing Components Are Displayed query should get the element by selector" time="0.017" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Components Are Displayed query"/>
+  <testcase name="Testing NgSelect should create" time="0.07" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing NgSelect"/>
+  <testcase name="Testing Components Are Displayed query should get the element by name of the component" time="0.007" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Components Are Displayed query"/>
+  <testcase name="Testing Components Are Displayed querySelector should get the element by id" time="0.007" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Components Are Displayed querySelector"/>
+  <testcase name="Testing Text Is Displayed querySelector should display the welcome back text" time="0.015" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Text Is Displayed querySelector"/>
+  <testcase name="Testing Components Are Displayed querySelector should get the element by class" time="0.009" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Components Are Displayed querySelector"/>
   <testcase name="Testing Components Are Displayed querySelector should get the element by selector" time="0.006" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Components Are Displayed querySelector"/>
-  <testcase name="Testing NgSelect should create" time="0.054" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing NgSelect"/>
-  <testcase name="Testing Components Are Displayed querySelectorAll should get the element by class" time="0.008" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Components Are Displayed querySelectorAll"/>
-  <testcase name="Testing Components Are Displayed querySelectorAll should get the element by id" time="0.006" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Components Are Displayed querySelectorAll"/>
-  <testcase name="Testing Components Are Displayed querySelectorAll should get the element by selector" time="0.007" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Components Are Displayed querySelectorAll"/>
-  <testcase name="Testing NgClass should create" time="0.016" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing NgClass"/>
-  <testcase name="Testing NgFors queryAll should pass down the correct data to its child components" time="0.019" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing NgFors queryAll"/>
-  <testcase name="Testing Text Is Displayed querySelector should display the welcome back text" time="0.031" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Text Is Displayed querySelector"/>
-  <testcase name="Testing NgFors queryAll should show the correct number of elements" time="0.009" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing NgFors queryAll"/>
-  <testcase name="Testing Text Is Displayed querySelectorAll should display the welcome back text" time="0.009" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Text Is Displayed querySelectorAll"/>
-  <testcase name="Testing User Inputs And Text Areas should create" time="0.013" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing User Inputs And Text Areas"/>
-  <testcase name="Testing NgFors should create" time="0.007" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing NgFors"/>
+  <testcase name="Testing Text Is Displayed should create" time="0.019" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Text Is Displayed"/>
+  <testcase name="Testing Components Are Displayed queryAll should get the element by class" time="0.006" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Components Are Displayed queryAll"/>
   <testcase name="Testing Text Is Displayed query should display the welcome back text" time="0.007" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Text Is Displayed query"/>
-  <testcase name="Testing NgFors querySelectorAll should show the correct number of elements" time="0.008" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing NgFors querySelectorAll"/>
-  <testcase name="Testing Text Is Displayed should create" time="0.006" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Text Is Displayed"/>
-  <testcase name="Testing NgFors querySelectorAll should pass down the correct data to its child components" time="0.007" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing NgFors querySelectorAll"/>
-  <testcase name="Testing Text Is Displayed queryAll should display the welcome back text" time="0.008" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Text Is Displayed queryAll"/>
-  <testcase name="Testing Child Component Inputs should create" time="0.035" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Child Component Inputs"/>
-  <testcase name="AppComponent should render title" time="0.068" classname="Chrome_Headless_91_0_4472_106_(Windows_10).AppComponent"/>
-  <testcase name="Testing User Inputs And Text Areas should update the field title when the user types a new value into the input" time="0.103" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing User Inputs And Text Areas">
-    <failure type="">Error: Expected 'old title' to equal 'new title'.
-    at &lt;Jasmine&gt;
-    at UserContext.&lt;anonymous&gt; (http://localhost:9876/_karma_webpack_/src/app/components/8_testingUserInputsAndTextAreas/testing8.component.spec.ts:36:29)
-    at ZoneDelegate.invoke (http://localhost:9876/_karma_webpack_/node_modules/zone.js/dist/zone-evergreen.js:364:1)
-    at ProxyZoneSpec.push.QpwO.ProxyZoneSpec.onInvoke (http://localhost:9876/_karma_webpack_/node_modules/zone.js/dist/zone-testing.js:292:1)
-</failure>
-  </testcase>
-  <testcase name="AppComponent should have as title 'example-angular-app'" time="0.01" classname="Chrome_Headless_91_0_4472_106_(Windows_10).AppComponent"/>
-  <testcase name="AppComponent should create the app" time="0.009" classname="Chrome_Headless_91_0_4472_106_(Windows_10).AppComponent"/>
-  <testcase name="Testing NgIfs shouldnt show the title when showTitle is false" time="0.015" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing NgIfs"/>
-  <testcase name="Testing NgIfs should show the title when showTitle is true" time="0.005" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing NgIfs"/>
-  <testcase name="Testing NgIfs should create" time="0.005" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing NgIfs"/>
+  <testcase name="Testing Components Are Displayed queryAll should get the element by selector" time="0.005" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Components Are Displayed queryAll"/>
+  <testcase name="Testing Components Are Displayed queryAll should get the element by id" time="0.006" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Components Are Displayed queryAll"/>
+  <testcase name="Testing Text Is Displayed querySelectorAll should display the welcome back text" time="0.006" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Text Is Displayed querySelectorAll"/>
+  <testcase name="Testing Components Are Displayed queryAll should get the element by name of the component" time="0.009" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Components Are Displayed queryAll"/>
+  <testcase name="Testing Text Is Displayed queryAll should display the welcome back text" time="0.006" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Text Is Displayed queryAll"/>
+  <testcase name="Testing Components Are Displayed querySelectorAll should get the element by class" time="0.005" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Components Are Displayed querySelectorAll"/>
+  <testcase name="Testing Components Are Displayed querySelectorAll should get the element by selector" time="0.005" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Components Are Displayed querySelectorAll"/>
+  <testcase name="Testing Components Are Displayed querySelectorAll should get the element by id" time="0.006" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Components Are Displayed querySelectorAll"/>
+  <testcase name="Testing Components Are Displayed should create" time="0.016" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Components Are Displayed"/>
+  <testcase name="Testing User Inputs And Text Areas query should update the field title when the user types a new value into the input" time="0.015" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing User Inputs And Text Areas query"/>
+  <testcase name="Testing User Inputs And Text Areas querySelectorAll should update the field title when the user types a new value into the input" time="0.009" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing User Inputs And Text Areas querySelectorAll"/>
+  <testcase name="Testing User Inputs And Text Areas should create" time="0.006" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing User Inputs And Text Areas"/>
+  <testcase name="Testing User Inputs And Text Areas queryAll should update the field title when the user types a new value into the input" time="0.007" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing User Inputs And Text Areas queryAll"/>
+  <testcase name="Testing User Inputs And Text Areas querySelector should update the field title when the user types a new value into the input" time="0.006" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing User Inputs And Text Areas querySelector"/>
+  <testcase name="AppComponent should create the app" time="0.171" classname="Chrome_Headless_91_0_4472_106_(Windows_10).AppComponent"/>
+  <testcase name="AppComponent should have as title 'example-angular-app'" time="0.013" classname="Chrome_Headless_91_0_4472_106_(Windows_10).AppComponent"/>
+  <testcase name="AppComponent should render title" time="0.024" classname="Chrome_Headless_91_0_4472_106_(Windows_10).AppComponent"/>
+  <testcase name="Testing Child Component Inputs query should pass down the correct data to its child component" time="0.017" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Child Component Inputs query"/>
+  <testcase name="Testing Child Component Inputs queryAll should pass down the correct data to its child component" time="0.007" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Child Component Inputs queryAll"/>
+  <testcase name="Testing Child Component Inputs should create" time="0.005" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Child Component Inputs"/>
+  <testcase name="Testing NgFors queryAll should pass down the correct data to its child components" time="0.064" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing NgFors queryAll"/>
+  <testcase name="Testing NgFors queryAll should show the correct number of elements" time="0.008" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing NgFors queryAll"/>
+  <testcase name="Testing NgFors querySelectorAll should pass down the correct data to its child components" time="0.008" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing NgFors querySelectorAll"/>
+  <testcase name="Testing NgFors querySelectorAll should show the correct number of elements" time="0.007" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing NgFors querySelectorAll"/>
+  <testcase name="Testing NgFors should create" time="0.007" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing NgFors"/>
+  <testcase name="Testing NgClass should create" time="0.033" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing NgClass"/>
+  <testcase name="Testing NgIfs shouldnt show the title when showTitle is false" time="0.047" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing NgIfs"/>
+  <testcase name="Testing NgIfs should show the title when showTitle is true" time="0.01" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing NgIfs"/>
+  <testcase name="Testing NgIfs should create" time="0.006" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing NgIfs"/>
   <testcase name="Testing NgIfs shouldnt show the title when showTitle is false" time="0.006" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing NgIfs"/>
-  <testcase name="Testing NgIfs should show the title when showTitle is true" time="0.005" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing NgIfs"/>
+  <testcase name="Testing NgIfs should show the title when showTitle is true" time="0.007" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing NgIfs"/>
+  <testcase name="Testing Child Component Outputs querySelectorAll should call the correct function on child component output event" time="0.072" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Child Component Outputs querySelectorAll"/>
+  <testcase name="Testing Child Component Outputs querySelector should call the correct function on child component output event" time="0.009" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Child Component Outputs querySelector"/>
+  <testcase name="Testing Child Component Outputs should create" time="0.009" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Child Component Outputs"/>
+  <testcase name="Testing Child Component Outputs queryAll should call the correct function on child component output event" time="0.006" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Child Component Outputs queryAll"/>
+  <testcase name="Testing Child Component Outputs query should call the correct function on child component output event" time="0.008" classname="Chrome_Headless_91_0_4472_106_(Windows_10).Testing Child Component Outputs query"/>
   <system-out>
     <![CDATA[
 ]]>

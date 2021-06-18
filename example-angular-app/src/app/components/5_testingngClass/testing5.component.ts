@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class Testing5Component {
   title = 'example-angular-app';
+  public activeTitle = false;
 }

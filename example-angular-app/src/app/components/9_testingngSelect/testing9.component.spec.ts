@@ -1,4 +1,5 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { DebugElement } from '@angular/core';
+import { async, ComponentFixture, fakeAsync, flush, TestBed, tick } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { configureTestingModule } from 'src/app/testing-utils';
 import { Testing9Component } from './testing9.component';
@@ -25,8 +26,26 @@ describe('Testing NgSelect', () => {
       expect(component).toBeTruthy();
   });
 
-  // it('should display the welcome back text', () => {
-  //   const element = componentFixture.debugElement.query(By.css('#someId'));
-  //   expect(element.nativeElement.innerText.trim()).toEqual('Welcome back!');
-  // });
+  it('should call the function selectOption when the user selects a new value from the dropdown', fakeAsync(() => {
+    componentFixture.detectChanges();
+    const spy = spyOn(component, 'selectOption');
+    
+    const element = componentFixture.debugElement.query(By.css('#optionDropdown'));
+    triggerKeyDownEvent(element, 32); // space to open the ng select
+    componentFixture.detectChanges(); // update the UI
+    tick(); // wait for the dropdown to open
+    triggerKeyDownEvent(element, 40); // down arrow
+    triggerKeyDownEvent(element, 13); // enter to select and close the dropdown
+    
+    flush(); // wait for the dropdown to close
+    expect(spy).toHaveBeenCalledWith(jasmine.any(Object));
+}));
+
+  function triggerKeyDownEvent(element: DebugElement, which: number, key = ''): void {
+    element.triggerEventHandler('keydown', {
+        which: which,
+        key: key,
+        preventDefault: () => { },
+    });
+}
 });

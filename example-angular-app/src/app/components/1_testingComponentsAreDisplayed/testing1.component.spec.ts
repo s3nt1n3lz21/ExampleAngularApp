@@ -3,6 +3,7 @@ import { By } from '@angular/platform-browser';
 import { configureTestingModule } from 'src/app/testing-utils';
 import { ChildComponent } from '../childComponent/child.component';
 import { Testing1Component } from './testing1.component';
+import { Testing1Module } from './testing1.component.module';
 
 describe('Testing Components Are Displayed', () => {
   let component: Testing1Component;
@@ -12,7 +13,7 @@ describe('Testing Components Are Displayed', () => {
       configureTestingModule({
           declarations: [
             Testing1Component,
-          ],
+          ]
       }).compileComponents();
   }));
 
@@ -41,11 +42,6 @@ describe('Testing Components Are Displayed', () => {
       const element = componentFixture.debugElement.query(By.css('#title'));
       expect(element).toBeTruthy();
     });
-
-    it('should get the element by name of the component', () => {
-      const element = componentFixture.debugElement.query(By.directive(ChildComponent));
-      expect(element).toBeTruthy();
-    });
   })
 
   describe('queryAll', () => {
@@ -62,11 +58,6 @@ describe('Testing Components Are Displayed', () => {
     it('should get the element by id', () => {
       const elements = componentFixture.debugElement.queryAll(By.css('#title'));
       expect(elements[0]).toBeTruthy();
-    });
-
-    it('should get the element by name of the component', () => {
-      const element = componentFixture.debugElement.queryAll(By.directive(ChildComponent));
-      expect(element).toBeTruthy();
     });
   })
 

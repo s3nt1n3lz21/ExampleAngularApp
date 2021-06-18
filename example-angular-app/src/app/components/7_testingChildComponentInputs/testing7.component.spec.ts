@@ -25,8 +25,25 @@ describe('Testing Child Component Inputs', () => {
       expect(component).toBeTruthy();
   });
 
-  // it('should display the welcome back text', () => {
-  //   const element = componentFixture.debugElement.query(By.css('#someId'));
-  //   expect(element.nativeElement.innerText.trim()).toEqual('Welcome back!');
-  // });
+  describe('query', () => {
+    it('should pass down the correct data to its child component', () => {
+      component.title = "title";
+      
+      componentFixture.detectChanges();
+  
+      const element = componentFixture.debugElement.query(By.css('#title')).componentInstance;
+      expect(element.inputData).toEqual(component.title);
+    });
+  })
+
+  describe('queryAll', () => {
+    it('should pass down the correct data to its child component', () => {
+      component.title = "title";
+      
+      componentFixture.detectChanges();
+  
+      const elements = componentFixture.debugElement.queryAll(By.css('#title'));
+      expect(elements[0].componentInstance.inputData).toEqual(component.title);
+    });
+  })
 });

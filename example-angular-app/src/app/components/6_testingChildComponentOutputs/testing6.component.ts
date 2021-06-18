@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class Testing6Component {
   title = 'example-angular-app';
+  public updateData(val) {};
 }

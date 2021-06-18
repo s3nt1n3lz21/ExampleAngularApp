@@ -25,8 +25,83 @@ describe('Testing NgClass', () => {
       expect(component).toBeTruthy();
   });
 
-  // it('should display the welcome back text', () => {
-  //   const element = componentFixture.debugElement.query(By.css('#someId'));
-  //   expect(element.nativeElement.innerText.trim()).toEqual('Welcome back!');
-  // });
+  describe('query', () => {
+    it('should apply the class active when activeTitle is true', () => {
+      component.activeTitle = true;
+      
+      componentFixture.detectChanges();
+      
+      const element = componentFixture.debugElement.query(By.css('#title')).nativeElement;
+      expect(element.classList).toContain('active');
+    });
+    
+    it('shouldnt apply the class active when activeTitle is false', () => {
+        component.activeTitle = false;
+        
+        componentFixture.detectChanges();
+        
+        const element = componentFixture.debugElement.query(By.css('#title')).nativeElement;
+        expect(element.classList).not.toContain('active');
+    });
+  })
+
+  describe('queryAll', () => {
+    it('should apply the class active when activeTitle is true', () => {
+      component.activeTitle = true;
+      
+      componentFixture.detectChanges();
+      
+      const elements = componentFixture.debugElement.queryAll(By.css('#title'));
+      expect(elements[0].nativeElement.classList).toContain('active');
+    });
+    
+    it('shouldnt apply the class active when activeTitle is false', () => {
+        component.activeTitle = false;
+        
+        componentFixture.detectChanges();
+        
+        const elements = componentFixture.debugElement.queryAll(By.css('#title'));
+        expect(elements[0].nativeElement.classList).not.toContain('active');
+    });
+  })
+
+  describe('querySelector', () => {
+    it('should apply the class active when activeTitle is true', () => {
+      component.activeTitle = true;
+      
+      componentFixture.detectChanges();
+      
+      const element = componentFixture.debugElement.nativeElement.querySelector('#title');
+      expect(element.classList).toContain('active');
+    });
+    
+    it('shouldnt apply the class active when activeTitle is false', () => {
+        component.activeTitle = false;
+        
+        componentFixture.detectChanges();
+        
+        const element = componentFixture.debugElement.nativeElement.querySelector('#title');
+        expect(element.classList).not.toContain('active');
+    });
+  })
+
+  describe('querySelectorAll', () => {
+    it('should apply the class active when activeTitle is true', () => {
+      component.activeTitle = true;
+      
+      componentFixture.detectChanges();
+      
+      const elements = componentFixture.debugElement.nativeElement.querySelectorAll('#title');
+      expect(elements[0].classList).toContain('active');
+    });
+    
+    it('shouldnt apply the class active when activeTitle is false', () => {
+        component.activeTitle = false;
+        
+        componentFixture.detectChanges();
+        
+        const elements = componentFixture.debugElement.nativeElement.querySelectorAll('#title');
+        expect(elements[0].classList).not.toContain('active');
+    });
+  })
 });

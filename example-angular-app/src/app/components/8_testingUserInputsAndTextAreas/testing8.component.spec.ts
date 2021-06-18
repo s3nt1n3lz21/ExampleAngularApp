@@ -25,14 +25,51 @@ describe('Testing User Inputs And Text Areas', () => {
       expect(component).toBeTruthy();
   });
 
-  it('should update the field title when the user types a new value into the input', () => {
-    component.title = 'old title';
-    const element = componentFixture.debugElement.query(By.css('#title')).nativeElement;
-    console.log('element: ', element);
+  describe('query', () => {
+    it('should update the field title when the user types a new value into the input', () => {
+      component.title = 'old title';
+      const element = componentFixture.debugElement.query(By.css('#title')).nativeElement;
+  
+      element.value = 'new title';
+      element.dispatchEvent(new Event('input'));
+      
+      expect(component.title).toEqual('new title');
+    });
+  })
 
-    element.value = 'new title';
-    element.dispatchEvent(new Event('input'));
-    
-    expect(component.title).toEqual('new title');
-  });
+  describe('queryAll', () => {
+    it('should update the field title when the user types a new value into the input', () => {
+      component.title = 'old title';
+      const elements = componentFixture.debugElement.queryAll(By.css('#title'));
+  
+      elements[0].nativeElement.value = 'new title';
+      elements[0].nativeElement.dispatchEvent(new Event('input'));
+      
+      expect(component.title).toEqual('new title');
+    });
+  })
+
+  describe('querySelector', () => {
+    it('should update the field title when the user types a new value into the input', () => {
+      component.title = 'old title';
+      const element = componentFixture.debugElement.nativeElement.querySelector('#title');
+  
+      element.value = 'new title';
+      element.dispatchEvent(new Event('input'));
+      
+      expect(component.title).toEqual('new title');
+    });
+  })
+
+  describe('querySelectorAll', () => {
+    it('should update the field title when the user types a new value into the input', () => {
+      component.title = 'old title';
+      const elements = componentFixture.debugElement.nativeElement.querySelectorAll('#title');
+  
+      elements[0].value = 'new title';
+      elements[0].dispatchEvent(new Event('input'));
+      
+      expect(component.title).toEqual('new title');
+    });
+  })
 });

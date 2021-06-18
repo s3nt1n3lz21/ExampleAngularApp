@@ -13,6 +13,7 @@ import { Testing6Module } from './components/6_testingChildComponentOutputs/test
 import { Testing7Module } from './components/7_testingChildComponentInputs/testing7.component.module';
 import { Testing8Module } from './components/8_testingUserInputsAndTextAreas/testing8.component.module';
 import { Testing9Module } from './components/9_testingngSelect/testing9.component.module';
+import { SharedModule } from './shared.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,6 @@ import { Testing9Module } from './components/9_testingngSelect/testing9.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ChildComponentModule,
     Testing1Module,
     Testing2Module,
     Testing3Module,
@@ -30,7 +30,8 @@ import { Testing9Module } from './components/9_testingngSelect/testing9.componen
     Testing6Module,
     Testing7Module,
     Testing8Module,
-    Testing9Module
+    Testing9Module,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
