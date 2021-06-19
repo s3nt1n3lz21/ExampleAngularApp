@@ -7,5 +7,7 @@ import { Component } from '@angular/core';
 })
 export class Testing9Component {
   title = 'example-angular-app';
-  public selectOption() {}
+  options = [];
+  option = "";
+  public selectOption(val) {}
 }
