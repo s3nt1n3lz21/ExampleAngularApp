@@ -22,15 +22,23 @@ describe('Testing Child Component Inputs', () => {
   });
 
   it('should create', () => {
+      //Assign
+
+      //Act
+
+      //Assert
       expect(component).toBeTruthy();
   });
 
   describe('query', () => {
     it('should pass down the correct data to its child component', () => {
+      //Assign
       component.title = "title";
       
+      //Act
       componentFixture.detectChanges();
   
+      //Assert
       const element = componentFixture.debugElement.query(By.css('#title')).componentInstance;
       expect(element.inputData).toEqual(component.title);
     });
@@ -38,10 +46,13 @@ describe('Testing Child Component Inputs', () => {
 
   describe('queryAll', () => {
     it('should pass down the correct data to its child component', () => {
+      //Assign
       component.title = "title";
       
+      //Act
       componentFixture.detectChanges();
   
+      //Assert
       const elements = componentFixture.debugElement.queryAll(By.css('#title'));
       expect(elements[0].componentInstance.inputData).toEqual(component.title);
     });

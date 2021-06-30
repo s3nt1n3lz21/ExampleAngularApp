@@ -72,6 +72,7 @@ class ChildComponent {
     @Output() public outputData: EventEmitter<string> = new EventEmitter<string>();
 }
 
+// Create your test app
 export const configureTestingModule = ({
     imports = [],
     declarations = [],
@@ -83,7 +84,6 @@ export const configureTestingModule = ({
         HttpClientTestingModule,
         RouterTestingModule.withRoutes(routes),
         SharedModule,
-        BrowserAnimationsModule,
         ...imports
     ],
     declarations: [

@@ -22,41 +22,58 @@ describe('Testing NgIfs', () => {
   });
 
   it('should create', () => {
-      expect(component).toBeTruthy();
+    //Assign
+    
+    //Act
+
+    //Assert
+    expect(component).toBeTruthy();
   });
 
   it('should show the title when showTitle is true', () => {
+    //Assign
     component.showTitle = true;
 
+    //Act
     componentFixture.detectChanges();
 
+    //Assert
     const element = componentFixture.debugElement.query(By.css('#title'));
     expect(element).toBeTruthy();
   });
 
   it('shouldnt show the title when showTitle is false', () => {
+    //Assign
     component.showTitle = false;
 
+    //Act
     componentFixture.detectChanges();
 
+    //Assert
     const element = componentFixture.debugElement.query(By.css('#title'));
     expect(element).toBeFalsy();
   });
 
   it('should show the title when showTitle is true', () => {
+    //Assign
     spyOn(component,'showTitleFunction').and.returnValue(true);
     
+    //Act
     componentFixture.detectChanges();
     
+    //Assert
     const element = componentFixture.debugElement.query(By.css('#title2'));
     expect(element).toBeTruthy();
   });
 
   it('shouldnt show the title when showTitle is false', () => {
+    //Assign
     spyOn(component,'showTitleFunction').and.returnValue(false);
     
+    //Act
     componentFixture.detectChanges();
     
+    //Assert
     const element = componentFixture.debugElement.query(By.css('#title2'));
     expect(element).toBeFalsy();
   });

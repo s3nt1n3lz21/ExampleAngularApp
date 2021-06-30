@@ -22,24 +22,35 @@ describe('Testing NgFors', () => {
   });
 
   it('should create', () => {
-      expect(component).toBeTruthy();
+    //Assign
+    
+    //Act
+
+    //Assert
+    expect(component).toBeTruthy();
   });
 
   describe('queryAll', () => {
     it('should show the correct number of elements', () => {
+      //Assign
       component.messages = ['a','b','c'];
       
+      //Act
       componentFixture.detectChanges();
 
+      //Assert
       const elements = componentFixture.debugElement.queryAll(By.css('.rows'));
       expect(elements.length).toEqual(3);
     });
   
     it('should pass down the correct data to its child components', () => {
+      //Assign
       component.messages = ['a','b','c'];
       
+      //Act
       componentFixture.detectChanges();
 
+      //Assert
       const elements = componentFixture.debugElement.queryAll(By.css('.rows'));
       for (let i = 0; i < component.messages.length; i++) {
           expect(elements[i].nativeElement.innerText).toEqual(component.messages[i]);
@@ -49,19 +60,25 @@ describe('Testing NgFors', () => {
 
   describe('querySelectorAll', () => {
     it('should show the correct number of elements', () => {
+      //Assign
       component.messages = ['a','b','c'];
       
+      //Act
       componentFixture.detectChanges();
 
+      //Assert
       const elements = componentFixture.debugElement.nativeElement.querySelectorAll('.rows');
       expect(elements.length).toEqual(3);
     });
   
     it('should pass down the correct data to its child components', () => {
+      //Assign
       component.messages = ['a','b','c'];
 
+      //Act
       componentFixture.detectChanges();
 
+      //Assert
       const elements = componentFixture.debugElement.nativeElement.querySelectorAll('.rows');
       for (let i = 0; i < component.messages.length; i++) {
           expect(elements[i].innerText).toEqual(component.messages[i]);

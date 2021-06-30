@@ -22,86 +22,115 @@ describe('Testing NgClass', () => {
   });
 
   it('should create', () => {
-      expect(component).toBeTruthy();
+    //Assign
+    
+    //Act
+
+    //Assert
+    expect(component).toBeTruthy();
   });
 
   describe('query', () => {
     it('should apply the class active when activeTitle is true', () => {
+      //Assign
       component.activeTitle = true;
       
+      //Act
       componentFixture.detectChanges();
       
+      //Assert
       const element = componentFixture.debugElement.query(By.css('#title')).nativeElement;
       expect(element.classList).toContain('active');
     });
     
     it('shouldnt apply the class active when activeTitle is false', () => {
-        component.activeTitle = false;
+      //Assign  
+      component.activeTitle = false;
         
-        componentFixture.detectChanges();
+      //Act
+      componentFixture.detectChanges();
         
-        const element = componentFixture.debugElement.query(By.css('#title')).nativeElement;
-        expect(element.classList).not.toContain('active');
+      //Assert
+      const element = componentFixture.debugElement.query(By.css('#title')).nativeElement;
+      expect(element.classList).not.toContain('active');
     });
   })
 
   describe('queryAll', () => {
     it('should apply the class active when activeTitle is true', () => {
+      //Assign
       component.activeTitle = true;
       
+      //Act
       componentFixture.detectChanges();
       
+      //Assert
       const elements = componentFixture.debugElement.queryAll(By.css('#title'));
       expect(elements[0].nativeElement.classList).toContain('active');
     });
     
     it('shouldnt apply the class active when activeTitle is false', () => {
-        component.activeTitle = false;
+      //Assign  
+      component.activeTitle = false;
         
-        componentFixture.detectChanges();
-        
-        const elements = componentFixture.debugElement.queryAll(By.css('#title'));
-        expect(elements[0].nativeElement.classList).not.toContain('active');
+      //Act
+      componentFixture.detectChanges();
+      
+      //Assert
+      const elements = componentFixture.debugElement.queryAll(By.css('#title'));
+      expect(elements[0].nativeElement.classList).not.toContain('active');
     });
   })
 
   describe('querySelector', () => {
     it('should apply the class active when activeTitle is true', () => {
+      //Assign
       component.activeTitle = true;
       
+      //Act
       componentFixture.detectChanges();
       
+      //Assert
       const element = componentFixture.debugElement.nativeElement.querySelector('#title');
       expect(element.classList).toContain('active');
     });
     
     it('shouldnt apply the class active when activeTitle is false', () => {
-        component.activeTitle = false;
+      //Assign  
+      component.activeTitle = false;
         
-        componentFixture.detectChanges();
+      //Act
+      componentFixture.detectChanges();
         
-        const element = componentFixture.debugElement.nativeElement.querySelector('#title');
-        expect(element.classList).not.toContain('active');
+      //Assert
+      const element = componentFixture.debugElement.nativeElement.querySelector('#title');
+      expect(element.classList).not.toContain('active');
     });
   })
 
   describe('querySelectorAll', () => {
     it('should apply the class active when activeTitle is true', () => {
+      //Assign
       component.activeTitle = true;
       
+      //Act
       componentFixture.detectChanges();
       
+      //Assert
       const elements = componentFixture.debugElement.nativeElement.querySelectorAll('#title');
       expect(elements[0].classList).toContain('active');
     });
     
     it('shouldnt apply the class active when activeTitle is false', () => {
-        component.activeTitle = false;
+      //Assign  
+      component.activeTitle = false;
         
-        componentFixture.detectChanges();
+      //Act
+      componentFixture.detectChanges();
         
-        const elements = componentFixture.debugElement.nativeElement.querySelectorAll('#title');
-        expect(elements[0].classList).not.toContain('active');
+      //Assert
+      const elements = componentFixture.debugElement.nativeElement.querySelectorAll('#title');
+      expect(elements[0].classList).not.toContain('active');
     });
   })
 });

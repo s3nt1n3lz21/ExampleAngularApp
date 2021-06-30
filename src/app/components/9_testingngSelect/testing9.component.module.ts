@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { SharedModule } from 'src/app/shared.module';
 import { ChildComponentModule } from '../childComponent/child.component.module';
 import { Testing9Component } from './testing9.component';
 
@@ -7,7 +8,8 @@ import { Testing9Component } from './testing9.component';
         Testing9Component,
     ],
     imports: [
-        ChildComponentModule
+        ChildComponentModule,
+        SharedModule
     ],
     exports: [
         Testing9Component,
