@@ -1,17 +1,17 @@
 import { TestBed, waitForAsync } from '@angular/core/testing';
 
 import { configureTestingModule } from 'src/app/testing-utils';
-import { Testing9Service } from './testing9.service';
+import { Testing10Service } from './testing10.service';
 
 describe('NavService', () => {
-    let service: Testing9Service;
+    let service: Testing10Service;
 
     beforeEach(waitForAsync(() => {
         configureTestingModule({
-            providers: [Testing9Service]
+            providers: [Testing10Service]
         });
 
-        service = TestBed.inject(Testing9Service);
+        service = TestBed.inject(Testing10Service);
     }));
 
     it('should be created', () => {
