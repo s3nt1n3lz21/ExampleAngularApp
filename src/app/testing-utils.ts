@@ -96,6 +96,15 @@ export class ApiServiceMock {
     }
 }
 
+@Injectable({
+    providedIn: 'root'
+})
+export class AuthorisationServiceMock {
+    public canActivate() {
+        return false;
+    }
+}
+
 export const routes: Routes = [
     {
         path: 'home',
@@ -108,8 +117,7 @@ export const routes: Routes = [
 export const configureTestingModule = ({
     imports = [],
     declarations = [],
-    providers = [],
-    routes = []
+    providers = []
 }) => TestBed.configureTestingModule({
     imports: [
         HttpClientTestingModule,
@@ -133,6 +141,7 @@ export const configureTestingModule = ({
     providers: [
         Injector,
         { provide: ApiService, useClass: ApiServiceMock },
+        { provide: AuthorisationService, useClass: AuthorisationServiceMock },
         ...providers
     ],
 });
