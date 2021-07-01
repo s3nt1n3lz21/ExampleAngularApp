@@ -2,11 +2,13 @@
 import { TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { Component, EventEmitter, Injector, Input, Output} from '@angular/core';
+import { Component, EventEmitter, Injectable, Injector, Input, Output} from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared.module';
 import { Routes } from '@angular/router';
 import { AuthorisationService } from './typescriptTests/services/authorisation.service';
+import { ApiService } from './typescriptTests/services/api.service';
+import { BehaviorSubject, Subject } from 'rxjs';
 
 // import { SharedModule } from './shared/shared.module';
 // import { appRoutes } from './app.routing.module';
@@ -80,6 +82,20 @@ class ChildComponent {
 })
 class HomeComponent {}
 
+@Injectable({
+    providedIn: 'root'
+})
+export class ApiServiceMock {
+   
+    public getData() {
+        return new BehaviorSubject<number>(1).asObservable();
+    }
+
+    public getOtherData() {
+        return new BehaviorSubject<number>(2).asObservable();
+    }
+}
+
 export const routes: Routes = [
     {
         path: 'home',
@@ -116,6 +132,7 @@ export const configureTestingModule = ({
     ],
     providers: [
         Injector,
+        { provide: ApiService, useClass: ApiServiceMock },
         ...providers
     ],
 });

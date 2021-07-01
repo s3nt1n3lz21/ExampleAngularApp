@@ -7,9 +7,22 @@ import { Component } from '@angular/core';
 })
 export class Testing1Component {
   title = 'example-angular-app';
-  public functionToBeCalled() {}
+
+  public doSomething() {}
   
   public loadData() {
-    this.functionToBeCalled();
+    this.doSomething();
   }
+
+  public dontLoadData() {}
+
+  public callPrivateFunction() {
+    this.privateFunction();
+  }
+
+  private privateFunction() {
+    this.insidePrivateFunction();
+  };
+
+  public insidePrivateFunction() {}
 }

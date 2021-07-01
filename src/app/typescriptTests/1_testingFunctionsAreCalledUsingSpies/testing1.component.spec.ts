@@ -31,7 +31,7 @@ describe('Testing Functions Are Called Using Spies', () => {
 
   it('should call a function during another function', () => {
     //Assign
-    const spy = spyOn(component,'functionToBeCalled');
+    const spy = spyOn(component,'doSomething');
 
     //Act
     component.loadData();
@@ -42,32 +42,32 @@ describe('Testing Functions Are Called Using Spies', () => {
 
   it('should not call a function during another function', () => {
     //Assign
-    const spy = spyOn(component,'functionToBeCalled');
+    const spy = spyOn(component,'doSomething');
 
     //Act
-    component.loadData();
+    component.dontLoadData();
 
     //Assert
     expect(spy).not.toHaveBeenCalledWith();
   });
 
-  it('should call a function during another function', () => {
+  it('should call a function during another function without spy variable', () => {
     //Assign
-    spyOn(component,'functionToBeCalled');
+    spyOn(component,'doSomething');
 
     //Act
     component.loadData();
 
     //Assert
-    expect(component.functionToBeCalled).toHaveBeenCalledWith();
+    expect(component.doSomething).toHaveBeenCalledWith();
   });
 
   it('should call a function during a private function', () => {
     //Assign
-    const spy = spyOn(component,'functionToBeCalled');
+    const spy = spyOn(component,'insidePrivateFunction');
 
     //Act
-    component['_privateFunction']();
+    component['privateFunction']();
 
     //Assert
     expect(spy).toHaveBeenCalledWith();
@@ -75,12 +75,12 @@ describe('Testing Functions Are Called Using Spies', () => {
 
   it('should call a private function during another function', () => {
     //Assign
-    spyOn<any>(component,'_privateFunction');
+    spyOn<any>(component,'privateFunction');
 
     //Act
-    component.loadData();
+    component.callPrivateFunction();
 
     //Assert
-    expect(component['_privateFunction']).toHaveBeenCalledWith();
+    expect(component['privateFunction']).toHaveBeenCalledWith();
   });
 });
