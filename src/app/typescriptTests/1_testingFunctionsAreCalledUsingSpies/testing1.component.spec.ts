@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { configureTestingModule } from 'src/app/testing-utils';
 import { Testing1Component } from './testing1.component';
 
-describe('Testing Components Are Displayed', () => {
+describe('Testing Functions Are Called Using Spies', () => {
   let component: Testing1Component;
   let componentFixture: ComponentFixture<Testing1Component>;
 

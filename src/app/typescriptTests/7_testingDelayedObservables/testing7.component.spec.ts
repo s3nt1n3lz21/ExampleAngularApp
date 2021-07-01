@@ -1,9 +1,8 @@
 import { waitForAsync, ComponentFixture, TestBed, tick, fakeAsync } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
 import { configureTestingModule } from 'src/app/testing-utils';
 import { Testing7Component } from './testing7.component';
 
-describe('Testing Child Component Inputs', () => {
+describe('Testing Delayed Observables', () => {
   let component: Testing7Component;
   let componentFixture: ComponentFixture<Testing7Component>;
 

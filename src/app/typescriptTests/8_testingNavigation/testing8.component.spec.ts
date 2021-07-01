@@ -1,11 +1,10 @@
 import { waitForAsync, ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { configureTestingModule } from 'src/app/testing-utils';
 import { AuthorisationService } from '../services/authorisation.service';
 import { Testing8Component } from './testing8.component';
 
-describe('Testing User Inputs And Text Areas', () => {
+describe('Testing Navigation', () => {
   let component: Testing8Component;
   let componentFixture: ComponentFixture<Testing8Component>;
 

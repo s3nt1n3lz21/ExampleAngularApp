@@ -2,7 +2,7 @@ import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { configureTestingModule } from 'src/app/testing-utils';
 import { Testing4Component } from './testing4.component';
 
-describe('Testing NgFors', () => {
+describe('Testing Getters And Setters', () => {
   let component: Testing4Component;
   let componentFixture: ComponentFixture<Testing4Component>;
 

@@ -2,7 +2,7 @@ import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { configureTestingModule } from 'src/app/testing-utils';
 import { Testing3Component } from './testing3.component';
 
-describe('Testing NgIfs', () => {
+describe('Testing Function Results', () => {
   let component: Testing3Component;
   let componentFixture: ComponentFixture<Testing3Component>;
 

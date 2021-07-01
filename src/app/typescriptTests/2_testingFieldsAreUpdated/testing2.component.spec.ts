@@ -1,9 +1,8 @@
 import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
 import { configureTestingModule } from 'src/app/testing-utils';
 import { Testing2Component } from './testing2.component';
 
-describe('Testing Text Is Displayed', () => {
+describe('Testing Fields Are Updated', () => {
   let component: Testing2Component;
   let componentFixture: ComponentFixture<Testing2Component>;
 

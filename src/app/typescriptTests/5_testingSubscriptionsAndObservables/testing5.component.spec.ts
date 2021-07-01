@@ -1,10 +1,9 @@
 import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
 import { configureTestingModule } from 'src/app/testing-utils';
 import { ApiService } from '../services/api.service';
 import { Testing5Component } from './testing5.component';
 
-describe('Testing NgClass', () => {
+describe('Testing Subscriptions And Observables', () => {
   let component: Testing5Component;
   let componentFixture: ComponentFixture<Testing5Component>;
 
