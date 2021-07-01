@@ -5,6 +5,8 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { Component, EventEmitter, Injector, Input, Output} from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared.module';
+import { Routes } from '@angular/router';
+import { AuthorisationService } from './typescriptTests/services/authorisation.service';
 
 // import { SharedModule } from './shared/shared.module';
 // import { appRoutes } from './app.routing.module';
@@ -72,12 +74,25 @@ class ChildComponent {
     @Output() public outputData: EventEmitter<string> = new EventEmitter<string>();
 }
 
+@Component({
+    selector: 'app-home-component',
+    template: ''
+})
+class HomeComponent {}
+
+export const routes: Routes = [
+    {
+        path: 'home',
+        component: HomeComponent,
+        canActivate: [AuthorisationService]
+    }
+]
+
 // Create your test app
 export const configureTestingModule = ({
     imports = [],
     declarations = [],
     providers = [],
-    // routes = appRoutes,
     routes = []
 }) => TestBed.configureTestingModule({
     imports: [

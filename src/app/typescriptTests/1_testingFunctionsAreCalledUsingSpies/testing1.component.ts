@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class Testing1Component {
   title = 'example-angular-app';
+  public functionToBeCalled() {}
+  
+  public loadData() {
+    this.functionToBeCalled();
+  }
 }

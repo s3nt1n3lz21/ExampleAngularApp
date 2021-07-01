@@ -28,4 +28,59 @@ describe('Testing Components Are Displayed', () => {
     //Assert
     expect(component).toBeTruthy();
   });
+
+  it('should call a function during another function', () => {
+    //Assign
+    const spy = spyOn(component,'functionToBeCalled');
+
+    //Act
+    component.loadData();
+
+    //Assert
+    expect(spy).toHaveBeenCalledWith();
+  });
+
+  it('should not call a function during another function', () => {
+    //Assign
+    const spy = spyOn(component,'functionToBeCalled');
+
+    //Act
+    component.loadData();
+
+    //Assert
+    expect(spy).not.toHaveBeenCalledWith();
+  });
+
+  it('should call a function during another function', () => {
+    //Assign
+    spyOn(component,'functionToBeCalled');
+
+    //Act
+    component.loadData();
+
+    //Assert
+    expect(component.functionToBeCalled).toHaveBeenCalledWith();
+  });
+
+  it('should call a function during a private function', () => {
+    //Assign
+    const spy = spyOn(component,'functionToBeCalled');
+
+    //Act
+    component['_privateFunction']();
+
+    //Assert
+    expect(spy).toHaveBeenCalledWith();
+  });
+
+  it('should call a private function during another function', () => {
+    //Assign
+    spyOn<any>(component,'_privateFunction');
+
+    //Act
+    component.loadData();
+
+    //Assert
+    expect(component['_privateFunction']).toHaveBeenCalledWith();
+  });
 });
