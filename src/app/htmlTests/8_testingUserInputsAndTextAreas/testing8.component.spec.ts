@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { configureTestingModule } from 'src/app/testing-utils';
 import { Testing8Component } from './testing8.component';
@@ -7,7 +7,7 @@ describe('Testing User Inputs And Text Areas', () => {
   let component: Testing8Component;
   let componentFixture: ComponentFixture<Testing8Component>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
       configureTestingModule({
           declarations: [
             Testing8Component

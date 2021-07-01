@@ -1,5 +1,5 @@
 import { DebugElement } from '@angular/core';
-import { async, ComponentFixture, discardPeriodicTasks, fakeAsync, flush, TestBed, tick } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { configureTestingModule } from 'src/app/testing-utils';
 import { Testing9Component } from './testing9.component';
@@ -8,7 +8,7 @@ describe('Testing NgSelect', () => {
   let component: Testing9Component;
   let componentFixture: ComponentFixture<Testing9Component>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
       configureTestingModule({
           declarations: [
             Testing9Component

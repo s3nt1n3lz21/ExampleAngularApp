@@ -1,15 +1,13 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { configureTestingModule } from 'src/app/testing-utils';
-import { ChildComponent } from '../childComponent/child.component';
 import { Testing1Component } from './testing1.component';
-import { Testing1Module } from './testing1.component.module';
 
 describe('Testing Components Are Displayed', () => {
   let component: Testing1Component;
   let componentFixture: ComponentFixture<Testing1Component>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
       configureTestingModule({
           declarations: [
             Testing1Component,
