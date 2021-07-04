@@ -2,7 +2,7 @@ import { waitForAsync, ComponentFixture, TestBed, tick, fakeAsync } from '@angul
 import { configureTestingModule } from 'src/app/testing-utils';
 import { Testing10Component } from './testing10.component';
 
-describe('Testing Delayed Observables', () => {
+describe('Testing Local Storage', () => {
   let component: Testing10Component;
   let componentFixture: ComponentFixture<Testing10Component>;
 

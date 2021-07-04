@@ -31,6 +31,7 @@ describe('Testing Getters And Setters', () => {
 
   it('should get the correct result when using the getter', () => {
     //Assign
+    component.data = 5;
     const expectedResult = 5;
 
     //Act
@@ -42,6 +43,7 @@ describe('Testing Getters And Setters', () => {
 
   it('should update the data when using the setter', () => {
     //Assign
+    component.data = 5;
     const data = 3;
 
     //Act

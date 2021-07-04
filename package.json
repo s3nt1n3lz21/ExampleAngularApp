@@ -24,7 +24,8 @@
     "tslib": "^2.0.0",
     "ng2-flatpickr": "9.0.0",
     "flatpickr": "~4.6.6",
-    "zone.js": "~0.10.2"
+    "zone.js": "~0.10.2",
+    "immutable": "4.0.0-rc.12"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1001.1",
