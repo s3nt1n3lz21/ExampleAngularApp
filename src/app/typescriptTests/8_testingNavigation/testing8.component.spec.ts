@@ -44,4 +44,18 @@ describe('Testing Navigation', () => {
     tick(); // Wait until navigation is complete
     expect(router.url).toBe('/home');
   }));
+
+  it('shouldnt navigate to the home page if the user is not logged in', fakeAsync(() => {
+    //Assign
+    const router = TestBed.inject(Router);
+    const authorisationService = TestBed.inject(AuthorisationService);
+    spyOn(authorisationService, 'canActivate').and.returnValue(false); // The user is not allowed to navigate
+
+    //Act
+    router.navigate(['home']); // try navigating home
+
+    //Assert
+    tick(); // Wait until navigation is complete
+    expect(router.url).not.toBe('/home');
+  }));
 });
