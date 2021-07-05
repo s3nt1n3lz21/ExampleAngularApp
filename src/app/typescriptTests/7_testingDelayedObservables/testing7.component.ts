@@ -8,16 +8,9 @@ import { debounceTime } from 'rxjs/operators';
   styleUrls: ['./testing7.component.scss']
 })
 export class Testing7Component {
-  title = '';
   private searchSubject = new BehaviorSubject<string>('');
 
-  constructor() {
-    this.getUserSearch().pipe(debounceTime(500)).subscribe(() => {
-      this.getFirstPage();
-    });
-  }
-
-  public getUserSearch() {
+  public getSearchValue() {
     return this.searchSubject.asObservable();
   }
 
@@ -27,5 +20,11 @@ export class Testing7Component {
     setTimeout(() => {
       this.getFirstPage();
     }, 300);
+  }
+
+  public waitForInputToStopChanging() {
+    this.getSearchValue().pipe(debounceTime(500)).subscribe(() => {
+      this.getFirstPage();
+    });
   }
 }

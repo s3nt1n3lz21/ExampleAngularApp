@@ -82,6 +82,12 @@ class ChildComponent {
 })
 class HomeComponent {}
 
+@Component({
+    selector: 'app-login-component',
+    template: ''
+})
+class LoginComponent {}
+
 @Injectable({
     providedIn: 'root'
 })
@@ -106,6 +112,10 @@ export class AuthorisationServiceMock {
 }
 
 export const routes: Routes = [
+    {
+        path: '',
+        component: LoginComponent,
+    },
     {
         path: 'home',
         component: HomeComponent,

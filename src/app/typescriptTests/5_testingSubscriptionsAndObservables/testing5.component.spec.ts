@@ -49,12 +49,12 @@ describe('Testing Subscriptions And Observables', () => {
   it('should set the data when recieving new data', () => {
     //Assign
     const apiService = TestBed.inject(ApiService);
-    const getDataSubject = new BehaviorSubject<number>(3);
-    spyOn(apiService,'getData').and.returnValue(getDataSubject.asObservable());
+    const subject = new BehaviorSubject<number>(3);
+    spyOn(apiService,'getData').and.returnValue(subject.asObservable());
 
     //Act
     component.ngOnInit(); // Subscribe again
-    getDataSubject.next(5); // Emit a new value
+    subject.next(5); // Emit a new value
 
     //Assert
     expect(component.data).toEqual(5);
