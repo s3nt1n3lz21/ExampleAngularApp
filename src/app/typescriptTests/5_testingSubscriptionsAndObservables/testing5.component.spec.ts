@@ -39,7 +39,7 @@ describe('Testing Subscriptions And Observables', () => {
     spyOn(apiService,'getData').and.returnValue(getDataSubject.asObservable());
 
     //Act
-    component.ngOnInit(); // Subscribe again
+    component.ngOnInit(); // Subscribe again since the function was just changed.
     getDataSubject.next(5); // Emit a new value
 
     //Assert
