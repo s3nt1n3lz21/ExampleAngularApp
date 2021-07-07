@@ -32,8 +32,21 @@ describe('Testing The Change Detector In The Constructor', () => {
 
   it('should detach from the change detector on construction', () => {
     //Assign
-    const changeDetectorRef = componentFixture.debugElement.injector.get(ChangeDetectorRef);
-    const detectChangesSpy = spyOn(changeDetectorRef.constructor.prototype, 'detach');
+    // const changeDetector = TestBed.inject(ChangeDetectorRef); // Won't work
+    
+    // This won't work either as we create a new component
+    // const changeDetector = component['changeDetector'];
+    // const detectChangesSpy = spyOn(changeDetector, 'detectChanges');
+
+    const changeDetector = componentFixture.debugElement.injector.get(ChangeDetectorRef);
+    const detectChangesSpy = spyOn(changeDetector.constructor.prototype, 'detach');
+
+    // changeDetector.constructor
+    // similar to
+    // ChangeDetectorRef
+    
+    // This won't work as we need the specific ChangeDetector used in our test app
+    // const detectChangesSpy = spyOn(ChangeDetectorRef.prototype, 'detach');
 
     //Act
     TestBed.createComponent(Testing14Component);

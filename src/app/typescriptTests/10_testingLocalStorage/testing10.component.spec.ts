@@ -32,6 +32,7 @@ describe('Testing Local Storage', () => {
   it('should save data to local storage', () => {
     //Assign
     const spy = spyOn(Storage.prototype, 'setItem');
+    // const spy = spyOn(localStorage, 'setItem'); //doesn't work
 
     //Act
     component.setData();

@@ -22,23 +22,29 @@ describe('Testing The Change Detector', () => {
   });
 
   it('should create', () => {
-      //Assign
+    //Assign
 
-      //Act
+    //Act
 
-      //Assert
-      expect(component).toBeTruthy();
+    //Assert
+    expect(component).toBeTruthy();
   });
 
   it('should update the UI after loading the data', () => {
-      //Assign
-      const changeDetectorRef = componentFixture.debugElement.injector.get(ChangeDetectorRef);
-      const detectChangesSpy = spyOn(changeDetectorRef.constructor.prototype, 'detectChanges');
+    //Assign
+    // const changeDetector = TestBed.inject(ChangeDetectorRef); // Won't work
+    
+    const changeDetector = component['changeDetector'];
+    const detectChangesSpy = spyOn(changeDetector, 'detectChanges');
 
-      //Act
-      component.ngOnInit();
+    // This also works, but avoid using prototype if you don't need to
+    // const changeDetector = componentFixture.debugElement.injector.get(ChangeDetectorRef);
+    // const detectChangesSpy = spyOn(changeDetector.constructor.prototype, 'detectChanges');
 
-      //Assert
-      expect(detectChangesSpy).toHaveBeenCalledWith();
+    //Act
+    component.ngOnInit();
+
+    //Assert
+    expect(detectChangesSpy).toHaveBeenCalledWith();
   });
 });

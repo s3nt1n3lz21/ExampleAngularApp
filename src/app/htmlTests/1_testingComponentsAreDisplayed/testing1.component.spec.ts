@@ -133,8 +133,8 @@ describe('Testing Components Are Displayed', () => {
       //Act
 
       //Assert
-      const element = componentFixture.debugElement.nativeElement.querySelectorAll('app-child-component');
-      expect(element[0]).toBeTruthy();
+      const elements = componentFixture.debugElement.nativeElement.querySelectorAll('app-child-component');
+      expect(elements[0]).toBeTruthy();
     });
 
     it('should get the element by class', () => {
@@ -143,8 +143,8 @@ describe('Testing Components Are Displayed', () => {
       //Act
       
       //Assert
-      const element = componentFixture.debugElement.nativeElement.querySelectorAll('.title');
-      expect(element[0]).toBeTruthy();
+      const elements = componentFixture.debugElement.nativeElement.querySelectorAll('.title');
+      expect(elements[0]).toBeTruthy();
     });
   
     it('should get the element by id', () => {
@@ -153,8 +153,8 @@ describe('Testing Components Are Displayed', () => {
       //Act
       
       //Assert
-      const element = componentFixture.debugElement.nativeElement.querySelectorAll('#title');
-      expect(element[0]).toBeTruthy();
+      const elements = componentFixture.debugElement.nativeElement.querySelectorAll('#title');
+      expect(elements[0]).toBeTruthy();
     });
   })
 });
