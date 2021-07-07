@@ -39,7 +39,7 @@ describe('Testing NgFors', () => {
       componentFixture.detectChanges();
 
       //Assert
-      const elements = componentFixture.debugElement.queryAll(By.css('.rows'));
+      const elements = componentFixture.debugElement.queryAll(By.css('.row'));
       expect(elements.length).toEqual(3);
     });
   
@@ -51,10 +51,15 @@ describe('Testing NgFors', () => {
       componentFixture.detectChanges();
 
       //Assert
-      const elements = componentFixture.debugElement.queryAll(By.css('.rows'));
+      const elements = componentFixture.debugElement.queryAll(By.css('.row'));
       for (let i = 0; i < component.messages.length; i++) {
           expect(elements[i].nativeElement.innerText).toEqual(component.messages[i]);
       }
+      
+      // Do not loop over the elements
+      // for (let i = 0; i < elements.length; i++) {
+      //   expect(elements[i].nativeElement.innerText).toEqual(component.messages[i]);
+      // }
     });
   });
 
@@ -67,7 +72,7 @@ describe('Testing NgFors', () => {
       componentFixture.detectChanges();
 
       //Assert
-      const elements = componentFixture.debugElement.nativeElement.querySelectorAll('.rows');
+      const elements = componentFixture.debugElement.nativeElement.querySelectorAll('.row');
       expect(elements.length).toEqual(3);
     });
   
@@ -79,7 +84,7 @@ describe('Testing NgFors', () => {
       componentFixture.detectChanges();
 
       //Assert
-      const elements = componentFixture.debugElement.nativeElement.querySelectorAll('.rows');
+      const elements = componentFixture.debugElement.nativeElement.querySelectorAll('.row');
       for (let i = 0; i < component.messages.length; i++) {
           expect(elements[i].innerText).toEqual(component.messages[i]);
       }

@@ -39,8 +39,8 @@ describe('Testing NgClass', () => {
       componentFixture.detectChanges();
       
       //Assert
-      const element = componentFixture.debugElement.query(By.css('#title')).nativeElement;
-      expect(element.classList).toContain('active');
+      const element = componentFixture.debugElement.query(By.css('#title'));
+      expect(element.nativeElement.classList).toContain('active');
     });
     
     it('shouldnt apply the class active when activeTitle is false', () => {
@@ -51,8 +51,8 @@ describe('Testing NgClass', () => {
       componentFixture.detectChanges();
         
       //Assert
-      const element = componentFixture.debugElement.query(By.css('#title')).nativeElement;
-      expect(element.classList).not.toContain('active');
+      const element = componentFixture.debugElement.query(By.css('#title'));
+      expect(element.nativeElement.classList).not.toContain('active');
     });
   })
 

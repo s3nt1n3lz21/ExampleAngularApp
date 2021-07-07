@@ -38,7 +38,7 @@ describe('Testing NgIfs', () => {
     componentFixture.detectChanges();
 
     //Assert
-    const element = componentFixture.debugElement.query(By.css('#title'));
+    const element = componentFixture.debugElement.query(By.css('#title1'));
     expect(element).toBeTruthy();
   });
 
@@ -50,7 +50,7 @@ describe('Testing NgIfs', () => {
     componentFixture.detectChanges();
 
     //Assert
-    const element = componentFixture.debugElement.query(By.css('#title'));
+    const element = componentFixture.debugElement.query(By.css('#title1'));
     expect(element).toBeFalsy();
   });
 
