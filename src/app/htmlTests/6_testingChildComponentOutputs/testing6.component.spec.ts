@@ -34,13 +34,14 @@ describe('Testing Child Component Outputs', () => {
     it('should call the correct function on child component output event', () => {
       //Assign
       const spy = spyOn(component,'updateData');
-      
+      const event = new Event('outputData');
+
       //Act
       const element = componentFixture.debugElement.query(By.css('#title'));
-      element.nativeElement.dispatchEvent(new Event('outputData'));
+      element.nativeElement.dispatchEvent(event);
   
       //Assert
-      expect(spy).toHaveBeenCalledWith(jasmine.any(Event));
+      expect(spy).toHaveBeenCalledWith(event);
     });
   })
 
@@ -48,13 +49,14 @@ describe('Testing Child Component Outputs', () => {
     it('should call the correct function on child component output event', () => {
       //Assign
       const spy = spyOn(component,'updateData');
-      
+      const event = new Event('outputData');
+
       //Act
       const elements = componentFixture.debugElement.queryAll(By.css('#title'));
-      elements[0].nativeElement.dispatchEvent(new Event('outputData'));
+      elements[0].nativeElement.dispatchEvent(event);
   
       //Assert
-      expect(spy).toHaveBeenCalledWith(jasmine.any(Event));
+      expect(spy).toHaveBeenCalledWith(event);
     });
   })
 
@@ -62,13 +64,14 @@ describe('Testing Child Component Outputs', () => {
     it('should call the correct function on child component output event', () => {
       //Assign
       const spy = spyOn(component,'updateData');
-      
+      const event = new Event('outputData');
+
       //Act
       const element = componentFixture.debugElement.nativeElement.querySelector('#title');
-      element.dispatchEvent(new Event('outputData'));
+      element.dispatchEvent(event);
   
       //Assert
-      expect(spy).toHaveBeenCalledWith(jasmine.any(Event));
+      expect(spy).toHaveBeenCalledWith(event);
     });
   })
 
@@ -76,13 +79,14 @@ describe('Testing Child Component Outputs', () => {
     it('should call the correct function on child component output event', () => {
       //Assign
       const spy = spyOn(component,'updateData');
-      
+      const event = new Event('outputData');
+
       //Act
       const elements = componentFixture.debugElement.nativeElement.querySelectorAll('#title');
-      elements[0].dispatchEvent(new Event('outputData'));
+      elements[0].dispatchEvent(event);
   
       //Assert
-      expect(spy).toHaveBeenCalledWith(jasmine.any(Event));
+      expect(spy).toHaveBeenCalledWith(event);
     });
   })
 });
