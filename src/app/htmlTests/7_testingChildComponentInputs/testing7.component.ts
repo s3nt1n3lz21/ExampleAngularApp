@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class Testing7Component {
   title = '';
+  isDisabled = false;
 }
