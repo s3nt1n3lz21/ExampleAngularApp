@@ -7,7 +7,9 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "code-coverage": "ng test --code-coverage",
+    "code-diff-coverage": "diff-cover ./coverage/cobertura-coverage.xml --compare-branch=origin/master --fail-under=0"
   },
   "private": true,
   "dependencies": {

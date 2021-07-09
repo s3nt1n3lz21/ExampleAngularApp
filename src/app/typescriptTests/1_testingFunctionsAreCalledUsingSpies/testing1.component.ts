@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../services/api.service';
 
 @Component({
   selector: 'app-testing1',
@@ -7,6 +8,10 @@ import { Component } from '@angular/core';
 })
 export class Testing1Component {
   title = 'example-angular-app';
+
+  constructor(
+    private apiService: ApiService
+  ) {}
 
   public doSomething() {}
   
@@ -25,4 +30,8 @@ export class Testing1Component {
   };
 
   public insidePrivateFunction() {}
+
+  public serviceFunctionCalled() {
+    this.apiService.getData();
+  }
 }
