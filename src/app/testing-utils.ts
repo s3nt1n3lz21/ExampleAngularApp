@@ -2,9 +2,13 @@
 import { TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { Component, EventEmitter, Injector, Input, Output} from '@angular/core';
+import { Component, EventEmitter, Injectable, Injector, Input, Output} from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared.module';
+import { Routes } from '@angular/router';
+import { AuthorisationService } from './typescriptTests/services/authorisation.service';
+import { ApiService } from './typescriptTests/services/api.service';
+import { BehaviorSubject, Subject } from 'rxjs';
 
 // import { SharedModule } from './shared/shared.module';
 // import { appRoutes } from './app.routing.module';
@@ -72,18 +76,63 @@ class ChildComponent {
     @Output() public outputData: EventEmitter<string> = new EventEmitter<string>();
 }
 
+@Component({
+    selector: 'app-home-component',
+    template: ''
+})
+class HomeComponent {}
+
+@Component({
+    selector: 'app-login-component',
+    template: ''
+})
+class LoginComponent {}
+
+@Injectable({
+    providedIn: 'root'
+})
+export class ApiServiceMock {
+   
+    public getData() {
+        return new BehaviorSubject<number>(1).asObservable();
+    }
+
+    public getOtherData() {
+        return new BehaviorSubject<number>(2).asObservable();
+    }
+}
+
+@Injectable({
+    providedIn: 'root'
+})
+export class AuthorisationServiceMock {
+    public canActivate() {
+        return false;
+    }
+}
+
+export const routes: Routes = [
+    {
+        path: '',
+        component: LoginComponent,
+    },
+    {
+        path: 'home',
+        component: HomeComponent,
+        canActivate: [AuthorisationService]
+    }
+]
+
+// Create your test app
 export const configureTestingModule = ({
     imports = [],
     declarations = [],
-    providers = [],
-    // routes = appRoutes,
-    routes = []
+    providers = []
 }) => TestBed.configureTestingModule({
     imports: [
         HttpClientTestingModule,
         RouterTestingModule.withRoutes(routes),
         SharedModule,
-        BrowserAnimationsModule,
         ...imports
     ],
     declarations: [
@@ -101,6 +150,8 @@ export const configureTestingModule = ({
     ],
     providers: [
         Injector,
+        { provide: ApiService, useClass: ApiServiceMock },
+        { provide: AuthorisationService, useClass: AuthorisationServiceMock },
         ...providers
     ],
 });

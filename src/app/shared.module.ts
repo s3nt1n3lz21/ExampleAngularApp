@@ -9,10 +9,7 @@ import { NgSelectModule } from '@ng-select/ng-select';
 
 @NgModule({
     imports: [
-        Ng2FlatpickrModule,
         FormsModule,
-        ReactiveFormsModule,
-        RouterModule,
         CommonModule,
         NgSelectModule
     ],
@@ -22,10 +19,7 @@ import { NgSelectModule } from '@ng-select/ng-select';
     ],
     exports: [
         // Modules
-        Ng2FlatpickrModule,
         FormsModule,
-        ReactiveFormsModule,
-        RouterModule,
         CommonModule,
         NgSelectModule
     ],
