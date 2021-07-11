@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { configureTestingModule } from 'src/app/testing-utils';
+import { ApiService } from '../services/api.service';
 import { Testing1Component } from './testing1.component';
 
 describe('Testing Functions Are Called Using Spies', () => {
@@ -82,5 +83,17 @@ describe('Testing Functions Are Called Using Spies', () => {
 
     //Assert
     expect(component['privateFunction']).toHaveBeenCalledWith();
+  });
+
+  it('should call a function on a service', () => {
+    //Assign
+    const apiService = TestBed.inject(ApiService);
+    spyOn(apiService,'getData');
+
+    //Act
+    component.serviceFunctionCalled();
+
+    //Assert
+    expect(apiService.getData).toHaveBeenCalledWith();
   });
 });
