@@ -34,8 +34,8 @@ describe('Testing Subscriptions And Observables', () => {
   it('should call handleData when recieving new data', () => {
     //Assign
     const spy = spyOn(component,'handleData');
-    const apiService = TestBed.inject(ApiService);
     const getDataSubject = new BehaviorSubject<number>(3);
+    const apiService = TestBed.inject(ApiService);
     spyOn(apiService,'getData').and.returnValue(getDataSubject.asObservable());
 
     //Act

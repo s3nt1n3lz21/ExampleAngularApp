@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class Testing3Component {
   title = 'example-angular-app';
+
   public double(value) {
     return value*2;
   }
