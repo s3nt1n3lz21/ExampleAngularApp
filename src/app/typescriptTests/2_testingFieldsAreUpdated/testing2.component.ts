@@ -7,7 +7,9 @@ import { Component } from '@angular/core';
 })
 export class Testing2Component {
   title = 'example-angular-app';
+  
   count = 0;
+
   public updateCount(value) {
     this.count = value;
   }
