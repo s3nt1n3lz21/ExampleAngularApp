@@ -45,6 +45,7 @@ describe('Testing Local Storage', () => {
     //Assign
     const data = "value";
     const spy = spyOn(Storage.prototype, 'getItem').and.returnValue(JSON.stringify(data));
+    // const spy = spyOn(localStorage, 'setItem').and.returnValue(JSON.stringify(data)); //doesn't work
 
     //Act
     component.loadData();
