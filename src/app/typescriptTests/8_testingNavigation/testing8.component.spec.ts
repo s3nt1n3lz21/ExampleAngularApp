@@ -39,9 +39,9 @@ describe('Testing Navigation', () => {
 
     //Act
     router.navigate(['home']); // try navigating home
+    tick(); // Skip ahead to when navigation is complete
 
     //Assert
-    tick(); // Wait until navigation is complete
     expect(router.url).toBe('/home');
   }));
 
@@ -53,9 +53,9 @@ describe('Testing Navigation', () => {
 
     //Act
     router.navigate(['home']); // try navigating home
+    tick(); // Skip ahead to when navigation is complete
 
     //Assert
-    tick(); // Wait until navigation is complete
     expect(router.url).not.toBe('/home');
   }));
 });
