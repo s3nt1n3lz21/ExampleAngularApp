@@ -96,4 +96,28 @@ describe('Testing Functions Are Called Using Spies', () => {
     //Assert
     expect(apiService.getData).toHaveBeenCalledWith();
   });
+
+  it('should try loading data and be successful', () => {
+    //Assign
+    spyOn(component,'shouldLoadData').and.returnValue(true);
+    spyOn(component,'loadData');
+
+    //Act
+    component.tryLoadData();
+
+    //Assert
+    expect(component.loadData).toHaveBeenCalledWith();
+  });
+
+  it('should try load data and be unsuccessful', () => {
+    //Assign
+    spyOn(component,'shouldLoadData').and.returnValue(false);
+    spyOn(component,'dontLoadData');
+
+    //Act
+    component.tryLoadData();
+
+    //Assert
+    expect(component.dontLoadData).toHaveBeenCalledWith();
+  });
 });

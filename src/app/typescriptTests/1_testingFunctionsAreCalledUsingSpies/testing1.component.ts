@@ -34,4 +34,14 @@ export class Testing1Component {
   public serviceFunctionCalled() {
     this.apiService.getData();
   }
+
+  public tryLoadData() {
+    if (this.shouldLoadData()) {
+      this.loadData();
+    } else {
+      this.dontLoadData();
+    }
+  }
+
+  public shouldLoadData() { return true }
 }
