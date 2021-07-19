@@ -38,15 +38,11 @@ describe('Testing The Change Detector In The Constructor', () => {
     // const changeDetector = component['changeDetector'];
     // const detectChangesSpy = spyOn(changeDetector, 'detectChanges');
 
+    // This won't work either
+    // const detectChangesSpy = spyOn(ChangeDetectorRef.prototype, 'detach');
+
     const changeDetector = componentFixture.debugElement.injector.get(ChangeDetectorRef);
     const detectChangesSpy = spyOn(changeDetector.constructor.prototype, 'detach');
-
-    // changeDetector.constructor
-    // similar to
-    // ChangeDetectorRef
-    
-    // This won't work as we need the specific ChangeDetector used in our test app
-    // const detectChangesSpy = spyOn(ChangeDetectorRef.prototype, 'detach');
 
     //Act
     TestBed.createComponent(Testing14Component);

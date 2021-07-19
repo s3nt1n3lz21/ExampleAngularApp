@@ -39,7 +39,7 @@ describe('Testing The Change Detector In The Constructor', () => {
     component.setData(expectedData);
 
     //Assert
-    // expect(component.data).toEqual(expectedData);
+    // expect(component.data).toEqual(expectedData); // Won't work
     expect(is(component.data, expectedData)).toEqual(true);
   });
 });
