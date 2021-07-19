@@ -54,7 +54,7 @@ describe('Testing NgIfs', () => {
     expect(element).toBeFalsy();
   });
 
-  it('should show the title when showTitle is true', () => {
+  it('should show the title when showTitleFunction returns true', () => {
     //Assign
     spyOn(component,'showTitleFunction').and.returnValue(true);
     
@@ -66,7 +66,7 @@ describe('Testing NgIfs', () => {
     expect(element).toBeTruthy();
   });
 
-  it('shouldnt show the title when showTitle is false', () => {
+  it('shouldnt show the title when showTitleFunction returns false', () => {
     //Assign
     spyOn(component,'showTitleFunction').and.returnValue(false);
     
