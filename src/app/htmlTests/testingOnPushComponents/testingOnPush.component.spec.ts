@@ -3,7 +3,7 @@ import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { configureTestingModule } from 'src/app/testing-utils';
 import { TestingOnPushComponent } from './testingOnPush.component';
 
-describe('Testing Components Are Displayed', () => {
+describe('Testing On Push Components', () => {
   let component: TestingOnPushComponent;
   let componentFixture: ComponentFixture<TestingOnPushComponent>;
 

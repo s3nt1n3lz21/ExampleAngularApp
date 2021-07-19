@@ -1,9 +1,9 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'app-testing1',
-  templateUrl: './testing1.component.html',
-  styleUrls: ['./testing1.component.scss'],
+  selector: 'app-testingOnPush',
+  templateUrl: './testingOnPush.component.html',
+  styleUrls: ['./testingOnPush.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TestingOnPushComponent {
