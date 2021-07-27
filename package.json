@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "code-coverage": "ng test --code-coverage",
-    "code-diff-coverage": "diff-cover ./coverage/cobertura-coverage.xml --compare-branch=origin/master --fail-under=0"
+    "code-diff-coverage": "diff-cover ./coverage/cobertura-coverage.xml --compare-branch=origin/master --fail-under=80"
   },
   "private": true,
   "dependencies": {
