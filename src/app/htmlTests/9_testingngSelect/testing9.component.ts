@@ -9,5 +9,6 @@ export class Testing9Component {
   title = 'example-angular-app';
   options = [];
   option = "";
+  
   public selectOption(val) {}
 }
