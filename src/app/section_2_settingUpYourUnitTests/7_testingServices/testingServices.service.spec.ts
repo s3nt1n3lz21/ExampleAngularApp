@@ -3,7 +3,7 @@ import { TestBed, waitForAsync } from '@angular/core/testing';
 import { configureTestingModule } from 'src/app/testing-utils';
 import { TestingServicesService } from './testingServices.service';
 
-describe('NavService', () => {
+describe('Testing Services', () => {
     let service: TestingServicesService;
 
     beforeEach(waitForAsync(() => {

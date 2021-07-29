@@ -3,7 +3,7 @@ import { BehaviorSubject } from 'rxjs';
 import { configureTestingModule } from 'src/app/testing-utils';
 import { TestingAsynchronousCodeComponent } from './testingAsynchronousCode.component';
 
-describe('Testing Delayed Observables', () => {
+describe('Testing Asynchronous Code', () => {
   let component: TestingAsynchronousCodeComponent;
   let componentFixture: ComponentFixture<TestingAsynchronousCodeComponent>;
 

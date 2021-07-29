@@ -3,7 +3,7 @@ import { configureTestingModule } from 'src/app/testing-utils';
 import { TestingImuttablejsDataComponent } from './testingImuttablejsData.component';
 import { is, List } from 'immutable';
 
-describe('Testing The Change Detector In The Constructor', () => {
+describe('Testing Immutable.js Data', () => {
   let component: TestingImuttablejsDataComponent;
   let componentFixture: ComponentFixture<TestingImuttablejsDataComponent>;
 
