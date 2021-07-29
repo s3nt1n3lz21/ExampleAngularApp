@@ -1,14 +1,23 @@
-import { TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { configureTestingModule } from './testing-utils';
 
 describe('AppComponent', () => {
-  beforeEach(async () => {
-    await configureTestingModule({
-      declarations: [
-        AppComponent
-      ],
+  let component: AppComponent;
+  let componentFixture: ComponentFixture<AppComponent>;
+
+  beforeEach(waitForAsync(() => {
+    configureTestingModule({
+        declarations: [
+          AppComponent
+        ],
     }).compileComponents();
+  }));
+
+  beforeEach(() => {
+    componentFixture = TestBed.createComponent(AppComponent);
+    component = componentFixture.componentInstance;
+    componentFixture.detectChanges();
   });
 
   it('should create the app', () => {
@@ -17,16 +26,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'example-angular-app'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('example-angular-app');
-  });
+  function cleanStylesFromDOM(): void {
+    const head: HTMLHeadElement = document.getElementsByTagName('head')[0];
+    const styles: HTMLCollectionOf<HTMLStyleElement> | [] = head.getElementsByTagName('style');
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('example-angular-app app is running!');
+    for (let i = 0; i < styles.length; i++) {
+        head.removeChild(styles[i]);
+    }
+  }
+
+  afterAll(() => {
+      cleanStylesFromDOM();
   });
 });
