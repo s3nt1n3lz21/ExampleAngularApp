@@ -36,7 +36,7 @@ describe('Testing Functions In The Constructor', () => {
     spyOn(apiService,'getData');
 
     //Act
-    TestBed.createComponent(Testing13Component);
+    TestBed.createComponent(TestingFunctionsInTheConstructorComponent);
 
     //Assert
     expect(apiService.getData).toHaveBeenCalledWith();

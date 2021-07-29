@@ -45,7 +45,7 @@ describe('Testing The Change Detector In The Constructor', () => {
     const detectChangesSpy = spyOn(changeDetector.constructor.prototype, 'detach');
 
     //Act
-    TestBed.createComponent(Testing14Component);
+    TestBed.createComponent(TestingTheChangeDetectorInTheConstructorComponent);
 
     //Assert
     expect(detectChangesSpy).toHaveBeenCalledWith();
