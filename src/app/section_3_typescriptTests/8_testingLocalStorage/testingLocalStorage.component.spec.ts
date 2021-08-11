@@ -32,7 +32,7 @@ describe('Testing Local Storage', () => {
   it('should save data to local storage', () => {
     //Assign
     const spy = spyOn(Storage.prototype, 'setItem');
-    // const spy = spyOn(localStorage, 'setItem'); //doesn't work
+    // const spy = spyOn(localStorage, 'setItem'); //doesn't work in Firefox
 
     //Act
     component.setData();
@@ -45,7 +45,7 @@ describe('Testing Local Storage', () => {
     //Assign
     const data = "value";
     const spy = spyOn(Storage.prototype, 'getItem').and.returnValue(JSON.stringify(data));
-    // const spy = spyOn(localStorage, 'setItem').and.returnValue(JSON.stringify(data)); //doesn't work
+    // const spy = spyOn(localStorage, 'setItem').and.returnValue(JSON.stringify(data)); //doesn't work in Firefox
 
     //Act
     component.loadData();
