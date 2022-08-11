@@ -9,6 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "code-coverage": "ng test --code-coverage",
+    "test:ci": "npm test -- --no-watch --code-coverage --browsers=ChromeHeadlessCI",
     "code-diff-coverage": "diff-cover ./coverage/cobertura-coverage.xml --compare-branch=origin/master --fail-under=80"
   },
   "private": true,

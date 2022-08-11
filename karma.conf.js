@@ -41,7 +41,13 @@ module.exports = function (config) {
             pattern: '**/*.spec.ts',
             included: false
         }
-      ]
+      ],
+      customLaunchers: {
+        ChromeHeadlessCI: {
+          base: "ChromeHeadless",
+          flags: ["--no-sandbox"]
+        }
+      }
     });
   };
   
